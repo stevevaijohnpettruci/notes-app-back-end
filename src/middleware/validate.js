@@ -1,7 +1,7 @@
 const validate = (schema) => (req, res, next) => {
   const { error, value } = schema.validate(req.body, {
     abortEarly: false,
-    allowUnknown: false,
+    allowUnknown: true,
     stripUnknown: true,
   });
 
